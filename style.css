@@ -115,11 +115,28 @@ h1,h2,h3{font-family:var(--font-display); letter-spacing:0.5px; line-height:1.05
 .hero-cta{display:flex; gap:14px; flex-wrap:wrap;}
 
 /* Strip */
-.strip{background:var(--red); color:#fff; padding:22px 0;}
-.strip-inner{display:flex; flex-wrap:wrap; gap:24px; justify-content:space-between;}
-.strip-item{display:flex; align-items:center; gap:12px; flex:1; min-width:220px;}
-.strip-num{font-family:var(--font-display); font-size:26px; opacity:0.6;}
-.strip-item p{font-size:14px; font-weight:600;}
+.strip{background:var(--red); color:#fff; padding:36px 0 40px;}
+.strip-tag{
+  font-size:12.5px; letter-spacing:2.5px; text-transform:uppercase; font-weight:700;
+  color:#fff; opacity:0.85; margin-bottom:18px;
+}
+.strip-inner{display:flex; flex-wrap:wrap; gap:20px;}
+.strip-item{
+  display:flex; align-items:center; gap:14px; flex:1; min-width:220px;
+  background:var(--paper); color:var(--ink);
+  border-radius:5px; padding:20px 20px;
+  box-shadow:0 3px 0 rgba(0,0,0,0.18), 0 14px 26px rgba(0,0,0,0.3);
+  opacity:0; transform:translateX(-60px) rotate(-2deg);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.16,.84,.44,1);
+}
+.strip-item:nth-child(2){transform:translateX(-60px) rotate(1.5deg);}
+.strip-item:nth-child(3){transform:translateX(-60px) rotate(-1deg);}
+.reveal-section.in-view .strip-item{opacity:1;}
+.reveal-section.in-view .strip-item:nth-child(1){transform:translateX(0) rotate(-2deg);}
+.reveal-section.in-view .strip-item:nth-child(2){transform:translateX(0) rotate(1.5deg);}
+.reveal-section.in-view .strip-item:nth-child(3){transform:translateX(0) rotate(-1deg);}
+.strip-num{font-family:var(--font-display); font-size:26px; color:var(--red);}
+.strip-item p{font-size:14px; font-weight:600; color:var(--ink);}
 
 /* Sections */
 .section{padding:70px 0;}
@@ -173,7 +190,7 @@ h1,h2,h3{font-family:var(--font-display); letter-spacing:0.5px; line-height:1.05
 .reveal-section.in-view .service-card{opacity:1; transform:translateY(0);}
 
 @media (prefers-reduced-motion: reduce){
-  .reveal-fade, .reveal-word, .service-card{
+  .reveal-fade, .reveal-word, .service-card, .strip-item{
     opacity:1!important; transform:none!important; transition:none!important;
   }
 }

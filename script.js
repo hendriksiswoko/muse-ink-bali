@@ -33,6 +33,10 @@ document.querySelectorAll('.reveal-section .service-card').forEach((card, i) => 
   card.style.transitionDelay = `${i * 1000}ms`;
 });
 
+document.querySelectorAll('.reveal-section .strip-item').forEach((item, i) => {
+  item.style.transitionDelay = `${150 + i * 150}ms`;
+});
+
 const revealSections = document.querySelectorAll('.reveal-section');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
