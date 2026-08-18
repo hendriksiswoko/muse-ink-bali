@@ -92,8 +92,8 @@ h1,h2,h3{font-family:var(--font-display); letter-spacing:0.5px; line-height:1.05
   content:"";
   position:absolute; inset:0; z-index:1;
   background:
-    linear-gradient(180deg, rgba(8,8,10,0.55) 0%, rgba(8,8,10,0.82) 100%),
-    radial-gradient(circle at 20% 15%, rgba(163,22,47,0.25), transparent 45%);
+    linear-gradient(180deg, rgba(8,8,10,0.15) 0%, rgba(8,8,10,0.55) 100%),
+    radial-gradient(circle at 20% 15%, rgba(163,22,47,0.18), transparent 45%);
 }
 .hero-texture{
   position:absolute; inset:0; z-index:2; opacity:0.5;
@@ -188,6 +188,13 @@ h1,h2,h3{font-family:var(--font-display); letter-spacing:0.5px; line-height:1.05
 .portfolio-visual{width:64px; height:64px; color:var(--red);}
 .portfolio-visual svg{width:100%; height:100%;}
 .portfolio-label{font-size:12.5px; letter-spacing:1.5px; text-transform:uppercase; color:#cfcfd3; font-weight:600;}
+.portfolio-more{
+  margin-top:28px; font-size:14px; color:#a6a6ab; text-align:center;
+}
+.portfolio-more a{
+  color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:3px;
+}
+.portfolio-more a:hover{color:var(--red);}
 
 /* Artist */
 .artist-wrap{display:grid; grid-template-columns:280px 1fr; gap:50px; align-items:center;}
